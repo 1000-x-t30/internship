@@ -1,0 +1,103 @@
+// アラート
+// ==========================================================================
+// ページの上部などで、ボックス型のアラートを表示するための要素。
+// フォームの成功系メッセージや、エラー系メッセージをマークアップする。
+//
+
+// Roots
+.form_alert {
+	padding: 30px 40px;
+	background-color: #f7f7f7;
+	border: 4px solid #ddd;
+	border-radius: 8px;
+	margin: 30px 0;
+	line-height: 1.6;
+
+	@media (max-width: 800px) { // ※site MBP
+		padding: 5% 7%;
+		margin: 6% 0;
+	}
+}
+
+
+
+// 【包括】
+// ==================================================
+
+// Roots内部要素へのスタイリング
+// --------------------------------------------------
+
+.form_alert {
+	// アラートの表題
+	.form_alert--title {
+		font-size: 20px;
+		color: #333;
+		margin-bottom: 8px;
+		@media (max-width: 800px) { // ※site MBP
+			margin-bottom: 3%;
+		}
+	}
+	// アラートのテキスト
+	.form_alert--text_box {
+		color: #444;
+	}
+}
+
+
+// Rootsへのマルチクラス付与（語句追加複製／状態変化）
+// --------------------------------------------------
+
+.form_alert {
+	// 情報系アラート
+	// --------------------------------------------------
+	&.form_alert-info {
+		background-color: #f7f9ed;
+		border: 4px solid #d9dab5;
+
+		.form_alert--title {
+			color: #585617;
+		}
+		.form_alert--text_box {
+			color: #4d5810;
+		}
+	}
+
+	//　成功系アラート
+	// --------------------------------------------------
+	&.form_alert-success {
+		background-color: #edf9ee;
+		border: 4px solid #c2dab5;
+
+		.form_alert--title {
+			color: #215008;
+		}
+		.form_alert--text_box {
+			color: #276d1a;
+		}
+	}
+
+	// エラー系アラート
+	// --------------------------------------------------
+	&.form_alert-error {
+		background-color: #f9eded;
+		border: 4px solid #dab5b5;
+
+		.form_alert--title {
+			color: #880808;
+		}
+		.form_alert--text_box {
+			color: #943838;
+		}
+	}
+}
+
+
+// 【別名複製】 単独利用
+// ==================================================
+// ※シングルクラス用途のもので、数が増える場合は別途ファイル化する
+
+
+
+// 【命名所属化】
+// ==================================================
+

@@ -1,0 +1,307 @@
+// スクリーンナビゲーション（オーバーレイ）
+// ======================================================================
+// 画面横にオーバーレイで表示されるリンクメニュー用のコンテナ。
+// 専用のjsファイル`screen_nav-over.js`で制御
+//
+
+// 1. このModuleを利用する時に必要な上書き設定
+// ==================================================
+// jsでbodyに識別子となるclassを出力し、Module利用に必要なCSSを追加している。
+//
+// * `.use-screen_nav` …　このコンテナを使用している識別用。jsにて自動で付与
+// * `.screen_nav-is-open` …　メニューが開いている識別
+//
+
+body.use-screen_nav {
+	overflow-y: scroll;
+
+	.l-site--outer {
+		// スクロール追従するサイトヘッダーに合わせた上方余白
+		padding-top: $site_header_height;
+	}
+
+	// メニュー表示中にコンテンツ部分の操作を防ぐ下地要素（非表示中のスタイルとアニメーションの基本設定）
+	.screen_nav-ground {
+		opacity: 0;
+		// アニメーションの設定
+		transition-property: opacity;
+		transition-duration: 0.3s;
+		transition-delay: 0s;
+	}
+}
+
+//　メニューが開いている状態でのスタイル
+// --------------------------------------------------
+//
+body.screen_nav-is-open {
+
+	.l-site--outer {
+		// 位置
+		position: fixed;
+		width: 100%;
+
+	}
+	.screen_nav {
+		// 表示
+		opacity: 1;
+		z-index: 9999;
+	}
+	.screen_nav--body {
+		// スクロール指定
+		// ※常に指定すると、スマホでメニューのスクロールが反応してしまい、スクロールがひっかかるため、screen_nav-is-openが付与されている時のみ指定
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	// 下地表示中のスタイル
+	.screen_nav-ground {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.1);
+		opacity: 1;
+		z-index: 9998;
+	}
+}
+
+
+
+
+// 2. スクリーンナビゲーションを開くボタン
+// ==================================================
+// containerを開閉するためのスイッチ。
+//
+.screen_nav--btn-open {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	z-index: 100;
+	display: inline-block;
+	width: 60px;
+	height: 52px;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #aaa;
+	line-height: 1;
+	vertical-align: bottom;
+
+
+	// ボタン内部のアイコン
+	.icon {
+
+		// 3本ボーダーのデザイン
+		.icon-border-1,
+		.icon-border-2,
+		.icon-border-3 {
+			position: absolute;
+			display: block;
+			background: #555;
+			left: 50%;
+			width: 30px;
+				margin-left: -15px;
+			height: 4px;
+				margin-top: -2px;
+		}
+		> .icon-border-1 {
+			top: 30%;
+		}
+		> .icon-border-2 {
+			top: 50%;
+		}
+		> .icon-border-3 {
+			top: 70%;
+		}
+	}
+
+	&:hover {
+		background-color: #eee;
+	}
+}
+
+
+
+// 3. メニューのコンテナ
+// ==================================================
+// 内部にナビゲーションを収めるためのスクリーンナビゲーションのコンテナ。
+//
+
+.screen_nav {
+	// デザイン
+	background: #fefefe;
+	border-left: solid 1px #ddd;
+
+	// 初期位置
+	position: fixed;
+	top: 0;
+	opacity: 0;
+	z-index: -100;
+
+	// アニメーション設定
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+
+	// 背景色の表示不具合回避
+	height: 100%;
+
+	// レスポンシブ設定
+	// 画面サイズによってコンテナの幅を最適化
+
+	// PC向け
+	@media (min-width:801px) {
+		left: 60%;
+		width: 40%;
+	}
+
+	// サイト規定のブレイクポイント
+	@media (max-width: 800px) {
+		left: 30%;
+		width: 70%;
+	}
+	@media (max-width:768px) {
+		left: 30%;
+		width: 70%;
+	}
+	@media (max-width:640px) {
+		left: 25%;
+		width: 75%;
+	}
+	@media (max-width:480px) {
+		left: 10%;
+		width: 90%;
+	}
+	@media (max-width:320px) {
+		left: 0%;
+		width: 100%;
+	}
+}
+
+// 内部構造化（大枠での見出しや区分けが必要な場合に使用する
+// --------------------------------------------------
+.screen_nav--header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	background-color: #f5f5f5;
+	border-bottom: solid 1px #ddd;
+	padding: 10px 20px;
+
+	.title {
+		a {
+			height: 60px;
+			line-height: 60px;
+			padding: 0 20px;
+			color: #555;
+			display: block;
+			float: left;
+		}
+	}
+}
+.screen_nav--body {
+}
+.screen_nav--footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	padding: 0 20px;
+	background-color: #f5f5f5;
+	line-height: 60px;
+}
+
+
+
+
+// 4. 閉じるボタン
+// ==================================================
+// 開閉コンテナ内部に配置する想定のもの
+//
+.screen_nav--btn-close {
+	position: relative;
+	display: block;
+	width: 60px;
+	height: 52px;
+	background-color: #eee;
+	border:solid 1px #aaa;
+	color: #000;
+
+	.icon.icon-close {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 22px;
+	}
+	.text {
+		font-size: 14px;
+	}
+}
+
+
+//　タイトル
+// --------------------------------------------------
+.screen_nav--title {
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+
+	.text, a {
+		display: block;
+		padding: 16px 20px;
+		color: #555;
+	}
+}
+
+
+// ナビゲーション項目一覧
+// --------------------------------------------------
+
+// リスト
+.screen_nav--list {
+	list-style: none;
+
+	li {
+		border-bottom: 1px solid #ccc;
+
+		&:first-child {
+			border-top: 1px solid #ccc
+		}
+
+		> a {
+			position: relative;
+			display: block;
+			padding: 20px 20px 20px 40px;
+			color: #555;
+			font-size: 16px;
+			line-height: 1.4;
+			word-wrap: break-word;
+
+			// 左の三角マーク
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 22px;
+				display: inline-block;
+				margin-top: -0.5em;
+				border: 0.4em solid transparent;
+				border-left: 0.5em solid #ccc;
+			}
+		}
+
+		&.is-active, &:hover {
+			> a {
+				&:before {
+					border-left: 0.5em solid #408f89;
+				}
+			}
+		}
+	}
+}

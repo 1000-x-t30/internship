@@ -1,0 +1,130 @@
+// メインビジュアル　カルーセル
+// ==========================================================================
+// メインビジュアル　カルーセル用のモジュール。
+//
+// jQueryモジュール「swiper」を使用する。
+// モジュール内部の詳細要素の命名は、プラグインの仕様に基づきカスタマイズ可能。
+// → `js/module/main_visual_carousel.js`
+//
+// 構造
+// --------------------------------------------------
+// * .main_visual_carousel　…　モジュール名
+// 	* .swiper-container　…　プラグイン規定のコンテナ
+// 		* .swiper-wrapper　…　プラグイン規定のコンテンツ包括要素
+// 			* .swiper-slide　…　プラグイン規定のスライドコンテンツ
+// 	* .controller　…　コントロール包括用（※独自追加　）
+// 		* .pagination　…　ページネーション（※設定jsファイルにより命名変更）
+// 		* .prev　…　前へのリンク（※設定jsファイルにより命名変更）
+// 		* .next　…　次へのリンク（※設定jsファイルにより命名変更）
+//
+// 注意事項
+// --------------------------------------------------
+// ページ内に複数設置する場合には、ページネーションと、次へ、前へ　のボタンの命名を変える必要がある。
+// これらは、jsの設定ファイルで命名変更可能。
+//
+
+
+
+// Roots
+.main_visual_carousel {
+	background-color: #758A7A;
+	padding: 40px 0 20px;
+	text-align: center;
+	min-height: 240px; //初期表示のチラつきを抑える（適宜変更）
+}
+
+// Structure
+.main_visual_carousel--header {}
+.main_visual_carousel--body {}
+.main_visual_carousel--footer {}
+
+
+// 【包括】
+// ==================================================
+//
+.main_visual_carousel {
+
+	// コンテナ（規定の命名）
+	// --------------------------------------------------
+	.swiper-container {
+
+		// スライドエリア（規定の命名）
+		// 画像など、スライドのメインコンテンツ領域
+		.swiper-wrapper {
+
+			// スライドコンテンツ（規定の命名／コンテンツ毎に付与）
+			.swiper-slide {
+				img {
+					max-height: 460px;
+				}
+			}
+		}
+
+		// ページネーション(※設定ファイルにより変更可)
+		// ※ブレットは、プラグインによりHTML出力される
+		.pagination {
+			margin-top: 20px;
+			// ブレット（規定の命名）
+			.swiper-pagination-bullet {
+				width: 16px;
+				height: 16px;
+				margin: 0 5px;
+				border: 1px solid #fff;
+				background-color: #aaa;
+				opacity: 1;
+				// アクティブ時（規定の命名）
+				&.swiper-pagination-bullet-active {
+					background-color: #555;
+					border: 1px solid #ccc;
+					opacity: 1;
+				}
+			}
+		}
+
+		// スクロールバー（規定の命名）
+		.swiper-scrollbar {
+		}
+	}
+
+	// コントロールエリア(※独自追加)
+	// --------------------------------------------------
+	.controller {
+		position: relative;
+
+		//　前へのボタン、次へのボタン共通スタイル
+		.prev,
+		.next {
+			position: absolute;
+			cursor: pointer;
+			bottom: 0px;
+			z-index: 2;
+		}
+
+		//　前へのボタン(※設定ファイルにより変更可)
+		.prev {
+			left: 1px;
+			// pcモニタでのボタン表示
+			/*.icon*/.is-pc {
+			}
+			// モバイルでのボタン表示
+			/*.icon*/.is-mb {
+				display: none;
+			}
+		}
+
+		//　次へのボタン(※設定ファイルにより変更可)
+		.next {
+			right: 1px;
+			// pcモニタでのボタン表示
+			/*.icon*/.is-pc {
+			}
+			// モバイルでのボタン表示
+			/*.icon*/.is-mb {
+				display: none;
+			}
+		}
+
+
+	}
+
+}

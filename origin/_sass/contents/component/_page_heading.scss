@@ -1,0 +1,65 @@
+// ページの表題
+// ==========================================================================
+// ページそのものの最も大きい見出し。
+// `h1`を内包するようなもの
+//
+
+
+// Roots
+.page_heading {
+	@media (max-width: 800px) { // site MBP
+	}
+}
+
+// Structure
+.page_heading--header {}
+.page_heading--main {}
+.page_heading--footer {}
+
+
+// 【命名所属化】
+// ==================================================
+//
+
+.page_heading--headline {
+	.title {
+	}
+}
+.page_heading--sub_title {
+}
+.page_heading--catch {
+	.text {}
+}
+.page_heading--description {
+	p {
+	}
+	p + p {
+	}
+}
+
+.page_heading--image {
+}
+.page_heading--nav {
+}
+.page_heading--nav--list {
+}
+.page_heading--text_box {
+	p {}
+}
+
+
+// 【包括】
+// ==================================================
+
+// Roots内部要素へのスタイリング
+// --------------------------------------------------
+
+.page_heading {
+}
+
+// Rootsへのマルチクラス付与（語句追加複製／状態変化）
+// --------------------------------------------------
+
+.page_heading {
+}
+

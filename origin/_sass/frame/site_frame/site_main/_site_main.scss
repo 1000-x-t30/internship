@@ -1,0 +1,36 @@
+// サイトメイン領域
+// ======================================================================
+// サイト内で共通して表示するメイン領域。
+//
+// Contents用のBlockを配置するための枠となる。
+//
+
+// Roots
+.site_main {
+	background-color: #fff;
+}
+
+// Structure
+// --------------------------------------------------
+// Contentsの配置のために構造体が必要な場合は利用する
+
+// Divider（ラッパー）
+.site_main--outer {}
+.site_main--inner {}
+
+// Layout（ラッパー）
+.l-site_main--outer {}
+.l-site_main--inner {}
+
+// Layout（上・中・下）
+.l-site_main--top {}
+.l-site_main--middle {}
+.l-site_main--bottom {}
+
+// Layout（横方向の分割）
+.l-site_main--col-1 {}
+.l-site_main--col-2 {}
+.l-site_main--col-3 {}
+
+
+

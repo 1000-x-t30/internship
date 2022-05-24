@@ -1,0 +1,114 @@
+// お問い合わせ用フォーム
+// ==========================================================================
+//
+// フォーム部品は基本的に`_sass/object/_form/`の部品を再利用する。
+// 以下を利用する場合には、上記ディレクトリでスタイリングしたものを上書きしたり、別途のものとして作成したい場合に使用する。
+//
+
+
+
+.first_view-contact {
+	background-image: url(/_asset/images/contact/first_view.png);
+
+	.circle_btn3
+	{
+		top: 0;
+		left: 0;
+		transform: translate(-50%, -40%);
+	}
+
+	.email_me
+	{
+		z-index: 1;
+		cursor: pointer;
+
+		.inline-arrow_next
+		{
+			transition-property: padding;
+			transition-duration: .3s;
+		}
+
+		&:hover > .inline-arrow_next
+		{
+			padding-left: 50px;
+		}
+	}
+
+	.inline
+	{
+		bottom: 0;
+		right: 0;
+		transform: translateY(50%);
+
+		.inline-text
+		{
+			padding-bottom: 50px;
+		}
+	}
+
+	.inline-arrow_next
+	{
+		background-color: transparent;
+		padding: 5px;
+		border: none;
+		width: 70px;
+		height: calc( 1px * ( 2 * 15 * 1.4) + 2px); // 三平方の2倍 + spanのheight -1px
+		box-sizing: content-box;
+
+		span
+		{
+			position: relative;
+			display: inline-block;
+			background-color: #fff;
+			width: 70px;
+			height: 3px;
+			vertical-align: middle;
+
+			&::before,
+			&::after
+			{
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				background-color: #fff;
+				width: 30px;
+				height: 3px;
+				transform-origin: right;
+			}
+			&::before
+			{
+				transform: rotateZ(45deg);
+			}
+			&::after
+			{
+				transform: rotateZ(-45deg);
+			}
+		}
+	}
+}
+
+.l-flex_window-contact
+{
+	.title
+	{
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+
+	.l-flex_window--left
+	{
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	.l-flex_window--right
+	{
+		@media screen and (max-width: 768px) {
+			padding-right: 5%;
+			padding-left: 5%;
+			width: 100%;
+		}
+	}
+}

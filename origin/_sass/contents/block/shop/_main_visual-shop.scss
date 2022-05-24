@@ -1,0 +1,202 @@
+.first_view-shop
+{
+	background-image: url(/_asset/images/shop/first_view.png);
+
+
+	.circle_btn3
+	{
+		right: 0;
+		bottom: 0;
+		transform: translate(20%, 50%);
+	}
+	.inline
+	{
+		top: 0;
+	}
+	.sub_description
+	{
+		bottom: 100%;
+		right: 0;
+		transform: translate(50%, 50%);
+	}
+}
+
+
+.collections-shop--inner
+{
+	padding-top: 190px;
+	padding-bottom: 90px;
+	padding-right: 5%;
+	padding-left: 5%;
+	margin: 0 auto;
+	max-width: 1920px;
+}
+
+.choise-shop--inner
+{
+	padding-top: 190px;
+	padding-bottom: 90px;
+	padding-right: 5%;
+	padding-left: 5%;
+	margin: 0 auto;
+	max-width: 1920px;
+
+	@media screen and (max-width: 1280px) {
+		padding-top: 0;
+	}
+}
+
+.collections-shop--header,
+.choise-shop--header
+{
+
+	.flex
+	{
+		display: flex;
+		padding-bottom: 80px;
+
+		@media screen and (max-width: 1366px) {
+			display: block;
+		}
+
+		> *
+		{
+			width: 50%;
+
+			@media screen and (max-width: 1366px) {
+				width: 100%;
+			}
+		}
+	}
+
+	.option
+	{
+		font-size: 2.4rem;
+	}
+
+	.plus
+	{
+		position: relative;
+		// background-color: #000;
+		width: 80px;
+		height: 80px;
+
+		&::before,
+		&::after
+		{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background-color: #000;
+			width: 70px;
+			height: 5px;
+			transform: translate(-50%, -50%);
+		}
+		&::before
+		{
+			transform-origin: center;
+			transform: translate(-50%, -50%) rotateZ(90deg);
+		}
+	}
+}
+
+.collections-shop--main,
+.choise-shop--main,
+.vintage-shop--main
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	> *
+	{
+		flex-basis: 48%;
+		margin-bottom: 190px;
+
+		@media screen and (max-width: 768px) {
+			margin-bottom: 80px;
+		}
+
+		@media screen and (max-width: 480px) {
+			flex-basis: 100%;
+		}
+	}
+}
+
+.collections-shop--main
+{
+
+	.collections_description
+	{
+		justify-content: center;
+
+		.collections_description--main
+		{
+			padding-bottom: 40px;
+		}
+		.collections_description--footer
+		{
+			.arrow_next
+			{
+				transform: translateX(-50%);
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.vintage-shop--main
+{
+	.collections_description
+	{
+		position: relative;
+		justify-content: center;
+		z-index: 2;
+
+		p:last-of-type
+		{
+			z-index: -1;
+		}
+
+		&::after
+		{
+			content: '';
+			position: absolute;
+			bottom: 20%;
+			right: 30%;
+			background-color: #FF5D00;
+			width: 3px;
+			height: 50%;
+			// transform-origin: bottom;
+			transform: rotateZ(30deg);
+			z-index: -1;
+		}
+	}
+}
+
+.vintage-shop
+{
+	padding-top: 130px;
+	background-color: #E8E8E8;
+}
+
+.vintage-shop--main
+{
+	.collections_description
+	{
+		order: -1;
+	}
+}
+
+
+.hey-videos
+{
+	background-color: #E8E8E8;
+	padding-bottom: 115px;
+}
+.hey-videos--header
+{
+	text-align: center;
+}

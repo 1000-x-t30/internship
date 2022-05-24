@@ -1,0 +1,277 @@
+// style.scss
+// ==========================================================================
+// 各パーシャルファイルをimportしてstyle.cssをコンパイルするためのファイル
+//
+
+// DI-CODING KIT [ICT.inc / corporate site]
+// --------------------------------------------------
+//
+
+
+
+
+// ◆Base
+// ==================================================
+// サイト広範囲に影響を及ぼすものや、FrameとContentsで共通利用したいもの
+//
+
+// ◇setting
+// --------------------------------------------------
+// 初期設定
+
+// 変数
+@import 'base/_setting/_variable';
+
+// Mixin
+@import 'base/_setting/_mixin';
+
+// フォント指定
+@import 'base/_setting/_font';
+
+
+// ブラウザ間のベース表示調整・平均化（ノーマライズ・リセット）
+@import 'base/_setting/_html-initialize';
+@import 'base/_setting/_html-element';
+
+
+
+// ◇Vender
+// --------------------------------------------------
+// サードパーティー製CSSフレームワーク（FontAwesome・Bootstrapなど）
+
+// FontAwesome
+@import 'base/vender/fontawesome/all.min';
+
+
+
+
+// ◆Frame
+// ==================================================
+// ヘッダーやフッター、ナビゲーションなど大外枠のサイトフレームとして配置される各ページ共通のモジュール
+//
+
+// ◇Frame/Layout
+// --------------------------------------------------
+// サイトフレーム内に限定して使用する、汎用的なレイアウト専用部品
+//
+
+// 【サイトヘッダー用】 最大表示有効幅の制御用ボックス
+@import 'frame/layout/_l-width-header.scss';
+
+// 【サイトフッター用】 最大表示有効幅の制御用ボックス
+@import 'frame/layout/_l-width-footer.scss';
+
+// 要素を画面の四隅に固定表示するためのレイアウトボックス
+@import 'frame/layout/_l-fixbox.scss';
+
+@import 'frame/layout/_l-flex_window.scss';
+
+
+
+// ◇Frame/Navigation
+// --------------------------------------------------
+// 各ページ共通のナビゲーション用部品
+//
+
+// グローバルナビゲーション
+@import 'frame/navigation/gnav/_gnav.scss';
+
+// スクリーンナビゲーション
+@import 'frame/navigation/screen_nav/_screen_nav-slide';
+// @import 'frame/navigation/screen_nav/_screen_nav-over';
+
+// ページトップへ戻るボタン
+@import 'frame/navigation/scroll_top/_scroll_top.scss';
+
+// パンくずリスト
+@import 'frame/navigation/topic_path/_topic_path.scss';
+
+
+
+// ◇Frame/SiteFrame
+// --------------------------------------------------
+// サイトフレーム内に配置される各ページ共通のモジュール（サイトヘッダー・サイトフッターなど）
+//
+
+// ### サイト大枠の要素
+
+// サイト大枠
+@import 'frame/site_frame/_site.scss';
+
+
+// ### サイトヘッダー
+
+// サイトヘッダー枠
+@import 'frame/site_frame/site_header/_site_header.scss';
+
+// ブランディング
+@import 'frame/site_frame/site_header/_header_branding';
+
+
+// ### サイトメイン
+
+// サイトメイン枠
+@import 'frame/site_frame/site_main/_site_main.scss';
+
+
+// ### サイトフッター
+
+// サイトフッター枠
+@import 'frame/site_frame/site_footer/_site_footer.scss';
+
+// スクロールTOPリンク
+@import 'frame/site_frame/site_footer/_footer_scroll_top';
+
+// サイトマップ
+@import 'frame/site_frame/site_footer/_footer_sitemap';
+
+// ブランディング
+@import 'frame/site_frame/site_footer/_footer_branding';
+
+// 権利表記
+@import 'frame/site_frame/site_footer/_footer_copyright';
+
+
+
+// ◆Contents
+// ==================================================
+// コンテンツ領域用のスタイル
+
+// ◇Contents/Layout
+// ==================================================
+// コンテンツ領域内に限定して使用する、汎用的なレイアウト専用部品
+//
+
+// コンテンツ用の表示幅制限用ボックス
+@import 'contents/layout/_l-width-contents.scss';
+
+// first view
+@import 'contents/layout/l-first_view.scss';
+
+// video block
+@import 'contents/layout/_l-visual_video.scss';
+@import 'contents/layout/_l-flex_video.scss';
+@import 'contents/layout/_l-centering_video.scss';
+@import 'contents/layout/_l-video_over.scss';
+@import 'contents/layout/_l-hey.scss';
+@import 'contents/layout/_l-email_client.scss';
+@import 'contents/layout/l-cart.scss';
+@import 'contents/layout/l-item_popup.scss';
+
+
+
+
+// ◇Contents/Component
+// ==================================================
+// コンテンツ領域用の汎用的なコンポーネント部品
+//
+
+// 見出し
+@import 'contents/component/_heading.scss';
+
+// 画像
+@import 'contents/component/_image.scss';
+
+// リンクボタン
+@import 'contents/component/_link_btn.scss';
+
+
+// 汎用リスト
+@import 'contents/component/_list.scss';
+// 序列の無いリスト
+@import 'contents/component/_list_ul.scss';
+// 序列のあるリスト
+@import 'contents/component/_list_ol.scss';
+// データ定義・説明リスト
+@import 'contents/component/_list_dl.scss';
+
+
+// 表組み
+@import 'contents/component/_table.scss';
+
+// テキストボックス
+@import 'contents/component/_text_box.scss';
+
+// Googleマップ（レスポンシブ対応）
+@import 'contents/component/_google_map.scss';
+
+// @import 'contents/component/main_visual.scss';
+
+// その他コンポーネント
+@import 'contents/component/_circle_btn.scss';
+@import 'contents/component/_arrow.scss';
+@import 'contents/component/_description.scss';
+@import 'contents/component/_inline.scss';
+@import 'contents/component/_sub_description.scss';
+@import 'contents/component/_about_article.scss';
+@import 'contents/component/_color_line.scss';
+@import 'contents/component/_sns_footer.scss';
+@import 'contents/component/_collections_view.scss';
+@import 'contents/component/_collections_description.scss';
+@import 'contents/component/_side_description.scss';
+@import 'contents/component/_base_btn.scss';
+@import 'contents/component/_social_networks_following.scss';
+
+//form
+@import 'contents/component/_form-input_text.scss';
+@import 'contents/component/_form-textarea.scss';
+@import 'contents/component/_form-btn.scss';
+
+// cart
+@import 'contents/component/cart-section.scss';
+
+
+
+// ◇Contents/Block
+// --------------------------------------------------
+// 各ページの固有コンテンツとして配置されるモジュール（セクション）用のスタイル
+// セクションごとを目安としてRootsと同じファイル名でパーシャルファイルを作成する
+// Roots(REMM)については https://remm.qwiproject.com を参照
+//
+
+// ### HOME（トップページ）
+
+// メインビジュアル
+@import 'contents/block/home/_main_visual-home.scss';
+
+// メインビジュアル（カルーセル／swiper使用）
+// @import 'contents/block/home/_main_visual_carousel--js.scss';
+
+// メインビジュアル（カルーセル　ワイドタイプ／swiper使用）
+// @import 'contents/block/home/_main_visual_carousel_wide--js.scss';
+
+// ページの表題-HOME用
+@import 'contents/block/home/_page_heading-home.scss';
+
+
+// ### shop
+@import 'contents/block/shop/_main_visual-shop.scss';
+@import 'contents/block/shop/_page_heading-shop.scss';
+
+
+// ### videos
+@import 'contents/block/videos/_main_visual-videos.scss';
+@import 'contents/block/videos/_page_heading-videos.scss';
+
+
+// ### lookbook
+@import 'contents/block/lookbook/_main_visual-lookbook.scss';
+@import 'contents/block/lookbook/_page_heading-lookbook.scss';
+
+
+// ### resume
+@import 'contents/block/resume/main_visual-resume.scss';
+@import 'contents/block/resume/_page_heading-resume.scss';
+
+
+// ### contact
+@import 'contents/block/contact/_contact.scss';
+
+
+// ◇Page
+// --------------------------------------------------
+// 各ページにおける例外的な上書き
+
+@import 'page/pg.scss';
+
+@import 'page/dir.scss';

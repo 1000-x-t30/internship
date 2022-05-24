@@ -1,0 +1,32 @@
+// 画面固定用　ページ上部へのスクロールリンクボタン
+// ======================================================================
+// ブラウザの右下など、画面内に固定配置する「スクロールトップボタン」のデザインを定める。
+// このボタン単体ではfixed処理をおこなわず、Layout用の`.l-fixbox-***`の内部に配置することでおこなう。
+//
+// スクロール処理のトリガーとして、`<a>`タグに`.scroll_top`を記述する。
+// ※`.scroll_top`のjsは、`js/utility/scroll_top.js`に記述している。
+//
+
+
+// Roots
+.scroll_top {
+	color: #fff;
+	display: block;
+	width: 52px;
+	height: 52px;
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	line-height: 52px;
+	background-color: #555;
+	cursor: pointer;
+
+	&:hover {
+		color: #ccc;
+	}
+}
+
+
+// 【命名所属化】
+// ==================================================
+//

@@ -1,0 +1,173 @@
+.cart_window
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: #E8E8E8;
+	width: 768px;
+	z-index: 100;
+
+	display: none;
+	transition-property: transform;
+	transition-duration: .2s;
+	transition-timing-function: ease-out;
+	transform: translateX(100%);
+	font-size: 1rem;
+
+	@media screen and (max-width: 768px) {
+		width: 100%;
+	}
+
+
+	@media screen and (max-width: 580px) {
+		.cart_window--header
+		{
+			.title
+			{
+				font-size: 4.5rem;
+			}
+		}
+
+		.cart-section
+		{
+			flex-direction: column;
+			height: auto;
+
+			.cart-info
+			{
+				margin-top: 10px;
+				margin-bottom: 25px;
+			}
+
+			.cart-info--header
+			{
+				> *
+				{
+					padding-bottom: .5em;
+				}
+			}
+
+			.cart-info--main
+			{
+				position: static;
+				flex-grow: 0;
+
+				.cart-info_genre
+				{
+					position: static;
+					font-size: 1.4em;
+					width: 100%;
+					text-align: center;
+					transform: rotateZ(0) translateX(0);
+				}
+			}
+
+			.image
+			{
+				width: 100%;
+				min-width: auto;
+				max-width: 100%;
+				height: 200px;
+				order: -1;
+
+				> img
+				{
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					object-position: center;
+				}
+			}
+
+		}
+	}
+
+	&.cart_window-active
+	{
+		display: block;
+		width: 100%;
+		z-index: 70;
+		transform: translateX(0%);
+		font-size: 1.2rem;
+
+		.cart_window--header
+		{
+			padding-top: 106px;
+		}
+
+		.cart_window--main
+		{
+			.cart-section
+			{
+				height: 560px; // section size
+			}
+
+			.cart-info--main
+			{
+				display: block;
+			}
+		}
+	}
+
+	&.is-active
+	{
+		transform: translateX(0%);
+	}
+}
+
+.cart_window--inner
+{
+	padding-right: 5%;
+	padding-left: 5%;
+	width: 100%;
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+.cart_window--header
+{
+	.title
+	{
+		font-size: 6em;
+		line-height: 107px;
+	}
+}
+
+.cart_window--main
+{
+	width: 100%;
+}
+
+.cart_window--footer
+{
+	padding-bottom: 45px;
+	margin-left: auto;
+	max-width: 370px;
+
+
+	dl
+	{
+		font-size: 2em;
+		padding-bottom: 45px;
+
+		.shipping
+		{
+			padding-bottom: 15px;
+			opacity: .3;
+		}
+
+		dt
+		{
+			float: left;
+		}
+		dd
+		{
+			text-align: right;
+		}
+	}
+
+	.cart-btn
+	{
+		display: block;
+	}
+}

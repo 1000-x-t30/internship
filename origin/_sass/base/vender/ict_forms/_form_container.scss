@@ -1,0 +1,85 @@
+// フォーム部品用のストラクチャ
+// ======================================================================
+// テーブルと内部の`th`と`td`の関係をつくるためのレイアウト用のディバイダ
+//
+
+
+// コンテナ
+// --------------------------------------------------
+// 役割としては`table`に該当
+
+.form_container {
+	border: 1px solid #bbb;
+	margin-top: 20px;
+
+	// フォーム用の`.l-width`とタイミングを合わせる
+	@media (max-width:480px) { // ◆【｜】 ファブレット一般サイズ
+		margin-top: 5%;
+	}
+}
+
+// 縦方向のディバイダ
+// --------------------------------------------------
+// 役割としては`tr`に該当
+
+.form_row {
+	display: flex;
+	flex-flow: row;
+	width: 100%;
+	border-bottom: 1px solid #bbb;
+
+	&:last-child {
+		border-bottom:none;
+	}
+
+	+ .form_row {
+
+	}
+
+	@media (max-width: 800px) { // ※site MBP
+		display: block;
+	}
+	// フォーム用の`.l-width`とタイミングを合わせる
+	@media (max-width:480px) { // ◆【｜】 ファブレット一般サイズ
+		border-bottom: none;
+	}
+
+}
+
+// 横方向のディバイダ
+// --------------------------------------------------
+// 役割としては`th`や`td`に該当
+
+.form_col {
+}
+
+// 入力の表題部分
+.form_col-title {
+	text-align: right;
+	padding: 1.6em 1.2em 1.6em 1em;
+	width: 28%;
+	background-color: #f7f7f7;
+
+	@media (max-width: 800px) { // ※site MBP
+		width: 100%;
+		padding: 0 1.5em;
+		text-align: left;
+		br {
+			display: none;
+		}
+	}
+	// フォーム用の`.l-width`とタイミングを合わせる
+	@media (max-width:480px) { // ◆【｜】 ファブレット一般サイズ
+		background-color: #eee;
+	}
+}
+
+// 入力エリア
+.form_col-data {
+	padding: 1.6em 2em 1.6em 1.5em;
+	width: 72%;
+	@media (max-width: 800px) { // ※site MBP
+		width: 100%;
+	}
+}
+

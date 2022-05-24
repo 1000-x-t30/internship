@@ -1,0 +1,70 @@
+.collections_view
+{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+
+	.collections_view-content
+	{
+		display: flex;
+		justify-content: space-between;
+		margin-right: 10%;
+		margin-left: 10%;
+
+		// @media screen and (max-width: 480px) {
+		// 	display: block;
+		// }
+
+		.plus_btn
+		{
+			background-color: transparent;
+			border: none;
+			width: 50px;
+			height: 50px;
+			cursor: pointer;
+
+			span
+			{
+				position: relative;
+				display: inline-block;
+				background-color: #090909;
+				width: 50px;
+				height: 4px;
+
+				&::before
+				{
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					background-color: #090909;
+					width: 4px;
+					height: 50px;
+					z-index: 1;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+	}
+
+	h3
+	{
+		font-size: 2.8rem;
+		padding-bottom: 10px;
+
+		+ p
+		{
+			font-size: 1.8rem;
+			padding-bottom: 10px;
+		}
+	}
+	> p //image
+	{
+		padding-bottom: 60px;
+		order: -1;
+		img
+		{
+			width: 100%;
+		}
+	}
+}

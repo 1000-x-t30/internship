@@ -1,0 +1,45 @@
+// フォーム部品のグルーピングボックス
+// ======================================================================
+// 入力エリア（一般的なテーブルの右側に配置するエリア）の内部にて、フォーム部品をひとまとめにしたい時に使用する。
+//
+//
+
+// Roots
+.form_group {
+	display: inline-block;
+}
+
+
+// ブロック化
+.form_group-row {
+	display: block;
+	// 縦に連続した場合
+	+ .form_group-row {
+		margin-top: 0.8em;
+	}
+}
+
+
+
+// 内部の小見出しと入力エリア
+// ==================================================
+// 右側のエリアでさらに小さいカラムが必要な時に使う
+// `.form_group-row`をラッパーとする。
+//
+
+// タイトル
+.form_group-col-title {
+	display: inline-block;
+	// 幅を指定すれば幅合わせが可能
+	// width: 10em;
+}
+// データ
+.form_group-col-data {
+	display: inline-block;
+}
+
+.form_group-flex {
+	display: flex;
+}
+
+

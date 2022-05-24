@@ -1,0 +1,66 @@
+// フォーム用の配置用テーブル
+// ==========================================================================
+// お問い合わせなどにおいて、フォーム部品を`table`で作成する場合に使用する。
+//
+
+
+// Roots
+.form_table {
+
+	// 一旦全てをリセット
+	tr,th,td {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+
+
+// 【包括】
+// ==================================================
+
+// Roots内部要素へのスタイリング
+// --------------------------------------------------
+
+.form_table {
+
+	// 基本設定
+	th,td {
+		margin: 0;
+		padding: 16px 24px;
+		border: 1px solid #ccc;
+		font-weight: normal;
+	}
+
+	// ブロック別
+	thead {
+		th,td {
+			background-color: #f2f2f2;
+		}
+		th {
+			background-color: #f2f2f2;
+			white-space: nowrap;
+		}
+		td {
+		}
+	}
+	tbody {
+		th,td {
+		}
+		th {
+			background-color: #f7f7f7;
+			white-space: nowrap;
+			text-align: left;
+		}
+		td {
+		}
+	}
+	tfoot {
+		th,td {
+		}
+		th {
+		}
+		td {
+		}
+	}
+}

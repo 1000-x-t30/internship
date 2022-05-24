@@ -1,0 +1,73 @@
+//
+// 【フッター用】 サイトのブランディング
+// ======================================================================
+// シンボルマーク、ロゴマークなどのブランディング用モジュール。
+//
+
+
+// Roots
+.footer_branding {
+	margin-bottom: 50px;
+}
+
+// Structure
+.footer_branding--header {}
+.footer_branding--body {}
+.footer_branding--footer {}
+
+
+
+// 【命名所属化】
+// ==================================================
+//
+
+// サイトのキャッチフレーズ
+.footer_branding--catch_phrase {
+}
+
+// サイトのタイトル
+.footer_branding--title {}
+
+// サイトのロゴ
+.footer_branding--logo {
+	img {
+		height: 50px;
+	}
+}
+
+// サイト名
+.footer_branding--name {
+}
+
+// サイトの概要テキスト
+.footer_branding--description {
+}
+
+
+
+// 【包括】
+// ==================================================
+//
+
+// Roots内部要素へのスタイリング
+// --------------------------------------------------
+
+.footer_branding {
+	.catch_phrase {
+
+	}
+	.title {
+
+	}
+	.name {
+
+	}
+	.description {
+
+	}
+}
+
+
+// Rootsへのマルチクラス付与（語句追加複製／状態変化）
+// --------------------------------------------------
+

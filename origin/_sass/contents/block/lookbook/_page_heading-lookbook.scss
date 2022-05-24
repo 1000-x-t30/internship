@@ -1,0 +1,22 @@
+// ページの表題
+// ==========================================================================
+// ページそのものの最も大きい見出し。
+// `h1`を内包するようなもの
+
+
+// collections-shop, choise-shopは'main_visual'で管理
+//
+.perfect_look-lookbook
+{
+	width: 100%;
+}
+
+.perfect_look-lookbook--inner,
+.total_wood-lookbook--header,
+.total_wood-lookbook--main .visual_items
+{
+	padding-right: 5%;
+	padding-left: 5%;
+	margin: 0 auto;
+	max-width: 1920px;
+}

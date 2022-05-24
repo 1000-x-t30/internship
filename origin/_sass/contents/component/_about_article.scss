@@ -1,0 +1,27 @@
+.about_article
+{
+	font-size: 8rem;
+	text-align: center;
+	word-break: keep-all;
+
+	@media screen and (max-width: 768px) {
+		font-size: 3rem;
+	}
+
+	strong
+	{
+		display: block;
+		font-size: 11.5rem;
+		font-weight: 400;
+		padding-bottom: 10px;
+
+		@media screen and (max-width: 768px) {
+			font-size: 5rem;
+		}
+	}
+
+	span
+	{
+		display: block;
+	}
+}

@@ -1,0 +1,85 @@
+// ブレイクポイント参照用ドキュメント
+// ==================================================
+// このファイルは、制作用のCSSにコンパイルせずに、参照用ドキュメントとして使用する。
+// 
+// ブレイクポイントのコピー＆ペースト用のコード。
+// 
+
+
+// 変数による制御（PCファースト）
+// --------------------------------------------------
+// 以下は、`origin/_sass/base/_setting/_variable--break_point.scss`にて定義する
+// 
+
+
+// 1・対応最小サイズと定義する画面幅
+@media screen and (max-width: #{$bp-small_screen}px) {}
+
+// 2・PC版、それに該当するラージサイス以上と定義する画面幅
+@media screen and (max-width: #{$bp-large_screen}px) {}
+
+// 3・最初のフルード化とUI切替の画面幅
+@media screen and (max-width: #{$bp-ui_change}px) {}
+
+
+
+
+// ブレイクポイント定義
+// ==================================================
+// 
+// PCの定義
+// --------------------------------------------------
+// * メジャーブレイクポイント　1280以上でPCとする
+// * マイナーブレイクポイント　ワイドスクリーン対応のブレイクポイント設定はプロジェクトの方針による
+// 
+// タブレットの定義
+// --------------------------------------------------
+// * メジャーブレイクポイント　1024以下でタブレットとする（横向きiPad）
+// * マイナーブレイクポイント　1024／800／768(縦向きiPad)／600
+// 
+// ファブレットの定義
+// --------------------------------------------------
+// * メジャーブレイクポイント　540以下でファブレットとする
+// * マイナーブレイクポイント　540／480／468
+// 
+// スマートフォンの定義
+// --------------------------------------------------
+// * メジャーブレイクポイント　414以下でスマートフォンとする(iPhone Plus系)
+// * マイナーブレイクポイント　414／375／360／320※これ以下は無し
+// 
+
+
+
+// 狭方用
+// --------------------------------------------------
+// 大きい画面から狭めていく方向でスタイリングする時に使用する
+// 【＝】デバイス横向き　【｜】デバイス縦向き
+// 
+
+@media screen and (max-width:1152px) { // XGA+
+}
+@media screen and (max-width:1024px) { // 【＝】 ipad系
+}
+@media screen and (max-width:960px) { // 【＝】 Nexus7(2013)  GALAXY-Note3
+}
+@media screen and (max-width:768px) { // ◆【｜】 Nexus9 , iPad(1st) - iPad4 , iPad-Air …　apple系TABLET
+}
+@media screen and (max-width:667px) { // 【＝】 iPhone6 , iPhone6s , iPhone7
+}
+@media screen and (max-width:600px) { // ◆【｜】 Nexus7 , KindleFire , Androidタブレット一般
+}
+@media screen and (max-width:540px) { // 【｜】 GalaxyNote3
+}
+@media screen and (max-width:480px) { // ◆【｜】 ファブレット一般サイズ
+}
+@media screen and (max-width:414px) { // ◆【｜】 iPhone6-Plus , iPhone6s-Plus , iPhone7-Plus , iPhone8-Plus
+}
+@media screen and (max-width:375px) { // ◆【｜】 iPhone6 , iPhone6s , iPhone7 , iPhoneX
+}
+@media screen and (max-width:360px) { // ◆【｜】 Nexus5 , Android一般多数
+}
+@media screen and (max-width:320px) { // ◆【｜】  iPhone5 , iPhone5c(s) , iPhoneSE , NexusS , Android
+}
+
+
+

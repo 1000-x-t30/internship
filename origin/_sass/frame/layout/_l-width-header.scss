@@ -1,0 +1,106 @@
+// 【サイトヘッダー用】 最大表示有効幅の制御用ボックス
+// ==================================================
+// 最大表示有効幅を制限するためのボックス
+//
+
+// header roots -----------------------
+header
+{
+	position: fixed;
+	background-color: transparent;
+	color: #fff;
+	padding-top: 40px;
+	padding-right: 5%;
+	padding-bottom: 38px;
+	padding-left: 5%;
+	width: 100%;
+	line-height: 1;
+	z-index: 90;
+
+	transition-property: color background-color;
+	transition-duration: .3s;
+
+	a {
+		display: inline-block;
+		color: inherit;
+		padding: 5px;
+		transition-property: color;
+		transition-duration: .2s;
+	}
+
+	&.scroll-header
+	{
+		background-color: #000;
+	}
+
+	&.color-change
+	{
+		background-color: #E8E8E8;
+		color: #000;
+	}
+}
+
+.header--inner
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 39px; // gnav-size
+	margin: 0 auto;
+	max-width: 1920px;
+
+	> p
+	{
+		letter-spacing: 14px;
+
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	.title
+	{
+		font-size: 18px;
+		cursor: pointer;
+	}
+}
+
+.header--inner-info
+{
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+	margin-right: 1rem;
+	align-items: center;
+	cursor: pointer;
+
+
+	.cart
+	{
+		letter-spacing: 14px;
+	}
+	.cart-text
+	{
+		display: block;
+
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	i
+	{
+		display: none;
+
+		@media screen and (max-width: 768px) {
+			display: block;
+		}
+	}
+
+	.cart-num
+	{
+		padding-left: 1rem;
+	}
+}
+
+

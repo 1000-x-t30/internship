@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.329" height="13.993" viewBox="0 0 22.329 13.993">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="22.329" height="13.993" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Play_video" data-name="Play video" clip-path="url(#clip-path)">
+    <g id="Triangle" fill="none" stroke-miterlimit="10">
+      <path d="M9.329,7,0,13.993V0Z" stroke="none"/>
+      <path d="M 1.000000953674316 1.999997138977051 L 1.000000953674316 11.99293613433838 L 7.661954879760742 6.996466636657715 L 1.000000953674316 1.999997138977051 M 9.5367431640625e-07 -3.814697265625e-06 L 9.328620910644531 6.996466636657715 L 9.5367431640625e-07 13.9929370880127 L 9.5367431640625e-07 -3.814697265625e-06 Z" stroke="none" fill="#ff5d00"/>
+    </g>
+    <g id="Triangle-2" data-name="Triangle" transform="translate(13)" fill="none" stroke-miterlimit="10">
+      <path d="M9.329,7,0,13.993V0Z" stroke="none"/>
+      <path d="M 1.000000953674316 1.999997138977051 L 1.000000953674316 11.99293613433838 L 7.661954879760742 6.996466636657715 L 1.000000953674316 1.999997138977051 M 9.5367431640625e-07 -3.814697265625e-06 L 9.328620910644531 6.996466636657715 L 9.5367431640625e-07 13.9929370880127 L 9.5367431640625e-07 -3.814697265625e-06 Z" stroke="none" fill="#ff5d00"/>
+    </g>
+  </g>
+</svg>

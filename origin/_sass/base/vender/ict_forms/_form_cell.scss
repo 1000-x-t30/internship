@@ -1,0 +1,136 @@
+// フォーム部品をラップする最小範囲の要素
+// ==========================================================================
+//
+
+// Roots
+.form_cell {
+}
+
+
+// 【別名複製】 単独利用
+// ==================================================
+// ※シングルクラス用途のもので、数が増える場合は別途ファイル化する
+
+
+// 初期設定
+.form_cell-text ,
+.form_cell-text-block ,
+.form_cell-select ,
+.form_cell-select-block ,
+.form_cell-textarea,
+.form_cell-btn {
+	margin: 4px;
+}
+
+// 1行テキストフォームを最小でラップ
+// --------------------------------------------------
+.form_cell-text {
+	display: inline-block;
+	&.span10 {width: 10%; min-width: 80px;}
+	&.span15 {width: 15%; min-width: 100px;}
+	&.span20 {width: 20%; min-width: 120px;}
+	&.span25 {width: 25%; min-width: 130px;}
+	&.span30 {width: 30%; min-width: 140px;}
+	&.span35 {width: 35%; min-width: 150px;}
+	&.span40 {width: 40%; min-width: 160px;}
+	&.span45 {width: 45%; min-width: 170px;}
+	&.span50 {width: 50%;}
+	&.span60 {width: 60%;}
+	&.span70 {width: 70%;}
+	&.span80 {width: 80%;}
+	&.span90 {width: 90%;}
+	&.span100 {width: 100%;}
+}
+// 端まで
+.form_cell-text-block {
+	width: 100%;
+	display: inline-block;
+}
+
+// セレクトを最小でラップ
+// --------------------------------------------------
+.form_cell-select {
+	display: inline-block;
+	&.span10 {width: 10%; min-width: 80px;}
+	&.span15 {width: 15%; min-width: 100px;}
+	&.span20 {width: 20%; min-width: 120px;}
+	&.span25 {width: 25%; min-width: 130px;}
+	&.span30 {width: 30%; min-width: 140px;}
+	&.span35 {width: 35%; min-width: 150px;}
+	&.span40 {width: 40%; min-width: 160px;}
+	&.span45 {width: 45%; min-width: 170px;}
+	&.span50 {width: 50%;}
+	&.span60 {width: 60%;}
+	&.span70 {width: 70%;}
+	&.span80 {width: 80%;}
+	&.span90 {width: 90%;}
+	&.span100 {width: 100%;}
+}
+// 端まで
+.form_cell-select-block {
+	width: 100%;
+	display: inline-block;
+}
+
+//テキストエリアを最小でラップ
+// --------------------------------------------------
+.form_cell-textarea {
+	display: inline-block;
+	width: 100%;
+}
+
+// ラジオボタンを最小でラップ
+// --------------------------------------------------
+.form_cell-radio {
+	input[type=radio] {
+		display: none;
+	}
+	.form_cell-radio--apc {
+		display: inline-block;
+		background-color: #fff;
+		width: 24px;
+		height: 24px;
+		border: 1px solid #aaa;
+		vertical-align: middle;
+		border-radius: 20px;
+		margin-top: -2px;
+	}
+	input[type=radio]:checked + .form_cell-radio--apc{
+		background-color:#f90;
+		box-shadow: 0px 0px 0px 4px #fff inset;
+	}
+}
+
+
+// チェックボックスを最小でラップ
+// --------------------------------------------------
+.form_cell-check {
+	input[type=checkbox] {
+		display: none;
+	}
+	.form_cell-check--apc {
+		display: inline-block;
+		background-color: #fff;
+		width: 22px;
+		height: 22px;
+		border: 1px solid #aaa;
+		vertical-align: middle;
+		margin-top: -2px;
+	}
+	input[type=checkbox]:checked + .form_cell-check--apc{
+		background-color:#f90;
+		box-shadow: 0px 0px 0px 3px #fff inset;
+	}
+}
+
+
+// ボタンを最小でラップ
+// --------------------------------------------------
+
+.form_cell-btn {
+	// Componentのbtnをラップする事で、汎用的なレスポンシブ設定を無効にするよう上書き
+	.btn {
+		width: auto;
+	}
+}
+

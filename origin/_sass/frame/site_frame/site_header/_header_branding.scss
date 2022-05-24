@@ -1,0 +1,85 @@
+// 【ヘッダー用】 サイトのブランディング
+// ======================================================================
+// シンボルマーク、ロゴマークなどのブランディング用モジュール。
+//
+
+
+// Roots
+.header_branding {
+	padding: 0;
+}
+
+// Structure
+.header_branding--header {}
+.header_branding--body {}
+.header_branding--footer {}
+
+
+
+// 【命名所属化】
+// ==================================================
+//
+
+// サイトのロゴ
+.header_branding--logo {
+	a {
+		position: relative;
+		display: flex;
+		width: 267px;
+		height: $site_header_height;
+		padding: 0 20px;
+		box-sizing: content-box;
+		align-items: center;
+		justify-content: center;
+		vertical-align: bottom;
+
+		@media (max-width: 800px) {
+			width: 200px;
+		}
+
+		img {
+			height: 50px;
+			max-width: 100%;
+			max-height: 100%;
+
+			@media (max-width: 800px) {
+				height: auto;
+			}
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+
+
+// 【包括】
+// ==================================================
+//
+
+// Roots内部要素へのスタイリング
+// --------------------------------------------------
+
+.header_branding {
+	.title {
+
+	}
+	.logo {
+
+	}
+	.name {
+
+	}
+	.description {
+
+	}
+}
+
+
+
+// Rootsへのマルチクラス付与（語句追加複製／状態変化）
+// --------------------------------------------------
+
+

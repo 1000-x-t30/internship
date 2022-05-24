@@ -1,0 +1,57 @@
+// メールフォームのモジュール
+// ======================================================================
+// プライバシーポリシーや規約などの表示
+//
+
+
+// Roots
+.form_confirm_text {}
+
+// Structure
+.form_confirm_text--header {}
+.form_confirm_text--body {
+	padding: 2em 0 1em 0;
+}
+.form_confirm_text--footer {}
+
+
+
+// 【命名所属化】
+// ==================================================
+
+// 見出し
+// --------------------------------------------------
+.form_confirm_text--title {}
+
+// 説明
+// --------------------------------------------------
+.form_confirm_text--description {
+	text-align: center;
+}
+
+// 文章確認エリア
+// --------------------------------------------------
+.form_confirm_text--text_container {
+	padding: 3em;
+	border: 1px solid #ddd;
+	min-height: 200px;
+	overflow-y: scroll;
+
+	// 内部に掲載するテキストのスタイルはここに記述
+
+	h2 {}
+	ul {
+		li{}
+	}
+	ol {
+		li{}
+	}
+	p {}
+
+}
+
+// チェックエリア
+// --------------------------------------------------
+.form_confirm_text--check {
+	text-align: center;
+}

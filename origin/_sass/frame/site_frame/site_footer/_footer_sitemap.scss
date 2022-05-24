@@ -1,0 +1,91 @@
+//
+// 【フッター用】 サイトマップ
+// ======================================================================
+// フッターに表示するサイトマップ。
+//
+
+
+// Roots
+.footer_sitemap {
+	display: flex;
+	flex-wrap: nowrap;
+	list-style: none;
+	justify-content: space-between;
+
+	@media (max-width: 800px) {
+		display: none;
+	}
+}
+
+// Structure
+.footer_sitemap--header {}
+.footer_sitemap--body {}
+.footer_sitemap--foter {}
+
+
+
+// 【命名所属化】
+// ==================================================
+//
+
+// タイトル
+.footer_sitemap--title {
+}
+// リスト
+.footer_sitemap--list {
+	width: 50%;
+	list-style: none;
+
+	@media (max-width: 800px) {
+		width: 100%;
+	}
+}
+// 項目
+.footer_sitemap--li {
+	line-height: 1;
+
+	&:first-child {
+		padding-left: 0;
+	}
+	&:last-child {
+		padding-right: 0;
+	}
+	// リンク
+	a {
+		display: inline-block;
+		padding: 10px;
+		color: #717171;
+
+		@media (max-width: 800px) {
+			display: block;
+			padding: 15px 10px;
+		}
+
+		&:hover {
+			color: #49BEE7;
+		}
+
+	}
+}
+
+// 【包括】
+// ==================================================
+//
+
+// Roots内部要素へのスタイリング
+// --------------------------------------------------
+
+.footer_sitemap {
+
+}
+
+
+
+// Rootsへのマルチクラス付与（語句追加複製／状態変化）
+// --------------------------------------------------
+
+
+
+
+
+

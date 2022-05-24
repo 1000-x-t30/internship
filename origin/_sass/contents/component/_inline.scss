@@ -1,0 +1,21 @@
+.inline
+{
+	> p
+	{
+		font-size: 7.6rem;
+		padding-bottom: 30px;
+
+		> span
+		{
+			display: inline-block;
+			border-bottom-style: solid;
+			border-bottom-width: 5px;
+			white-space: nowrap;
+			word-break: keep-all;
+		}
+
+		@media screen and (max-width: 768px) {
+			font-size: 3rem;
+		}
+	}
+}

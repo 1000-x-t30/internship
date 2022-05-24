@@ -1,0 +1,153 @@
+// 【サイトフッター用】 最大表示有効幅の制御用ボックス
+// ==================================================
+// 最大表示有効幅を制限するためのボックス
+//
+
+// footer roots -----------------------
+
+footer
+{
+	background-color: #000;
+	color: #fff;
+	padding-top: 41px;
+	padding-right: 3%;
+	padding-left: 3%;
+	width: 100%;
+	line-height: 1;
+
+	a {
+		display: inline-block;
+		color: #fff;
+		padding: 5px;
+	}
+
+	ul
+	{
+		list-style: none;
+	}
+}
+
+.footer--inner
+{
+	position: relative;
+	align-items: center;
+	padding-top: 401px;
+	margin: 0 auto;
+	max-width: 1920px;
+
+	@media screen and (max-width: 480px) {
+		padding-top: 50px;
+	}
+
+	> p
+	{
+		letter-spacing: 14px;
+	}
+
+	.title
+	{
+		font-size: 18px;
+		cursor: pointer;
+	}
+}
+
+.footer--header
+{
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	transform: translateY(401px); //footer padding-top
+
+	&::before
+	{
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+		content: '';
+		background-image: url(/_asset/images/frame/site_frame/site_footer/header-image.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		width:100%;
+		height: 100%;
+
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	.sub_description
+	{
+		color: rgba(255,255,255,.3);
+		font-size: 2rem;
+		letter-spacing: 2em;
+		line-height: 5em;
+		word-break: keep-all;
+
+		@media screen and (max-width: 768px) {
+			font-size: 1.2rem;
+		}
+		@media screen and (max-width: 480px) {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		transform: translateY(280px); //footer padding-top
+	}
+}
+
+.footer--main
+{
+	text-align: center;
+	margin: 0 auto;
+	max-width:	calc(6rem * 9);
+
+	.footer--main-nav
+	{
+		position: relative;
+		padding-bottom: 95px;
+		margin: 0 auto;
+		z-index: 1;
+
+		&::before
+		{
+			position: absolute;
+			bottom: 90%;
+			right: 0;
+			content: '';
+			background-image: url(/_asset/images/frame/site_frame/site_footer/main-image.png);
+			background-size: contain;
+			background-position-x: right;
+			background-repeat: no-repeat;
+
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+
+			@media screen and (max-width: 768px) {
+				display: none;
+			}
+		}
+
+		li
+		{
+			font-size: 6rem;
+			margin-bottom: 10px;
+
+			@media screen and (max-width: 480px) {
+				font-size: 3rem;
+			}
+		}
+	}
+
+	.description
+	{
+		font-size: 1.4rem;
+		line-height: 2.1em;
+		padding-bottom: 1em;
+		margin: 0 auto;
+		word-break: keep-all;
+	}
+
+}

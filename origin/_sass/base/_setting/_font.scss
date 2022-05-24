@@ -1,0 +1,137 @@
+// Webフォント
+// ==========================================================================
+// Webフォントの管理用。
+// 通常は、使用するフォントをこのファイルでimportするが、HTML側に記述する場合は使用しなくともよい。
+//
+// また、サーバー上にフォントデータをアップロードする場合には、別のファイルを作成し、フォント名などをファイルに加え、
+// 専用のものとして管理する。
+//
+//
+
+
+// Google日本語フォント
+// ==========================================================================
+// https://googlefonts.github.io/japanese/
+//
+// 以下、使用時には`import`のコメントアウトを解除する
+//
+
+
+// Noto Sans JP（源ノ角ゴシック）
+// --------------------------------------------------
+
+// @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+// ※フォント設定の参考として
+	// font-family: 'Noto Sans JP', sans-serif;
+	// font-weight: 100;
+	// font-weight: 300;
+	// font-weight: 400;
+	// font-weight: 500;
+	// font-weight: 700;
+	// font-weight: 900;
+
+// フォント使用時のBodyタグ設定(※以下をbodyの設定にコピペ)
+// body {
+// 	font-family: 'Noto Sans JP', sans-serif;
+// 	font-weight: 300;
+// 	// 字詰め指定
+// 	font-feature-settings : "palt";
+// 	letter-spacing: 1px;
+// 	// macの時 ※`.os-mac`はbodyClass.jsにより`body`タグに自動出力されるもの
+// 	&.os-mac {
+// 		// 字詰め指定 「約物」の表示バグ回避
+// 		font-feature-settings : "pkna";
+// 		letter-spacing: normal;
+// 	}
+// }
+
+
+// さわらびゴシック
+// --------------------------------------------------
+
+//@import url(https://fonts.googleapis.com/earlyaccess/sawarabigothic.css);
+
+
+// ※フォント設定の参考として
+	// font-family: "Sawarabi Gothic", sans-serif;
+	// font-weight: 400; // フォントデータとしては1種類
+
+// フォント使用時のBodyタグ設定(※以下をbodyの設定にコピペ)
+// body {
+// 	font-family: "Sawarabi Gothic", sans-serif;
+// 	// 字詰め指定
+// 	font-feature-settings : "palt";
+// 	letter-spacing: 1px;
+// 	// macの時 ※`.os-mac`はbodyClass.jsにより`body`タグに自動出力されるもの
+// 	&.os-mac {
+// 		// 字詰め指定 「約物」の表示バグ回避
+// 		font-feature-settings : "pkna";
+// 		letter-spacing: normal;
+// 	}
+// }
+
+
+
+// さわらび明朝
+// --------------------------------------------------
+
+// @import url(https://fonts.googleapis.com/earlyaccess/sawarabimincho.css);
+
+// ※フォント設定の参考として
+	// font-family: "Sawarabi Mincho", serif;
+	// font-weight: 400; // フォントデータとしては1種類
+
+
+// フォント使用時のBodyタグ設定
+// body {
+// 	font-family: "Sawarabi Mincho", serif;
+// 	// 字詰め指定
+// 	font-feature-settings : "palt";
+// 	letter-spacing: 1px;
+// 	// macの時 ※`.os-mac`はbodyClass.jsにより`body`タグに自動出力されるもの
+// 	&.os-mac {
+// 		// 字詰め指定 「約物」の表示バグ回避
+// 		font-feature-settings : "pkna";
+// 		letter-spacing: normal;
+// 	}
+// }
+
+
+
+// さわらび明朝
+// --------------------------------------------------
+
+// @import url(https://fonts.googleapis.com/earlyaccess/sawarabimincho.css);
+
+// ※フォント設定の参考として
+	// font-family: "Sawarabi Mincho", serif;
+	// font-weight: 400; // フォントデータとしては1種類
+
+
+// フォント使用時のBodyタグ設定
+// body {
+// 	font-family: "Sawarabi Mincho", serif;
+// 	// 字詰め指定
+// 	font-feature-settings : "palt";
+// 	letter-spacing: 1px;
+// 	// macの時 ※`.os-mac`はbodyClass.jsにより`body`タグに自動出力されるもの
+// 	&.os-mac {
+// 		// 字詰め指定 「約物」の表示バグ回避
+// 		font-feature-settings : "pkna";
+// 		letter-spacing: normal;
+// 	}
+// }
+
+
+
+// Didact Gothic
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+// font-family: 'Didact Gothic', sans-serif;
+
+body
+{
+	font-family: 'Didact Gothic', sans-serif;
+	font-weight: 400;
+}

@@ -1,0 +1,25 @@
+// ページの表題
+// ==========================================================================
+// ページそのものの最も大きい見出し。
+// `h1`を内包するようなもの
+//
+
+.check_videos-videos,
+.view_videos-videos,
+.holidays-videos,
+.model_sets-videos,
+.hey-videos
+{
+	width: 100%;
+}
+
+.check_videos-videos--inner,
+.view_videos-videos--header,
+.holidays-videos--inner,
+.model_sets-videos--inner,
+.hey-videos--inner
+{
+	margin: 0 auto;
+	padding: 65px 5%;
+	max-width: 1920px;
+}

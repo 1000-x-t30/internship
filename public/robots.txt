@@ -1,0 +1,4 @@
+﻿# サイトマップのURLを絶対パスで記述
+# Sitemap:http://domain.com/sitemap.xml
+# Sitemap:https://domain.com/sitemap.xml
+Sitemap:/sitemap.xml

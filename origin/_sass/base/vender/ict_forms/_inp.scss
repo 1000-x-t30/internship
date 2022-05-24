@@ -1,0 +1,53 @@
+// フォーム部品に直接付与するclass
+// ==========================================================================
+//
+
+
+// Roots
+.inp {
+}
+
+
+// 【別名複製】 単独利用
+// ==================================================
+// ※シングルクラス用途のもので、数が増える場合は別途ファイル化する
+
+// 意匠共通化
+// --------------------------------------------------
+//
+// 次の要素の意匠を共通化 → `input`,`textarea`,`select`
+.inp-control {
+	font-size: 16px; //16px以下の場合、iPhoneで画面ズームが発生する
+	border-radius: 6px;
+	border: 1px solid #999;
+	padding: 8px 12px;
+	width: 100%;
+	line-height: 1;
+	&:focus {
+		box-shadow: 0px 0px 1px 6px rgba(200,200,200,0.2);
+	}
+}
+
+select.inp-control {
+	padding: 7px 10px;
+}
+
+textarea.inp-control {
+	min-height: 200px;
+	max-width: 100%;
+	line-height: 1.6;
+	vertical-align:bottom; //下方の隙間消し
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+}
+
+
+// フォーム部品に直接付与する識別子（必要に応じて使用する）
+// --------------------------------------------------
+//
+
+.inp-text {}
+.inp-select {}
+.inp-textarea {}
+.inp-radio {}
+.inp-check {}

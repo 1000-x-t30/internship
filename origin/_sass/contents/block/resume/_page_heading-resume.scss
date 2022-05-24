@@ -1,0 +1,46 @@
+// ページの表題
+// ==========================================================================
+// ページそのものの最も大きい見出し。
+// `h1`を内包するようなもの
+
+
+// collections-shop, choise-shopは'main_visual'で管理
+//
+.perfect_look-lookbook
+{
+	width: 100%;
+}
+
+.perfect_look-lookbook--inner,
+.total_wood-lookbook--header,
+.total_wood-lookbook--main .visual_items
+{
+	padding-right: 5%;
+	padding-left: 5%;
+	margin: 0 auto;
+	max-width: 1920px;
+}
+// ページの表題
+// ==========================================================================
+// ページそのものの最も大きい見出し。
+// `h1`を内包するようなもの
+//
+
+/* article Emet
+	article.>div.--inner>div.--header+div.--main+div.--foote
+*/
+
+//first_view-home, services-homeは '_main_visual-home.scss' で管理
+.all_about-resume,
+.social_networks-resume
+{
+	width: 100%;
+}
+
+.all_about-resume--inner,
+.social_networks-resume--inner
+{
+	margin: 0 auto;
+	padding: 65px 5%;
+	max-width: 1920px;
+}

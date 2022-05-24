@@ -1,0 +1,134 @@
+// メインビジュアル（ワイドタイプ）　カルーセル
+// ==========================================================================
+// メインビジュアル　カルーセル用のモジュール。
+// 両端が画面外に見切れているような、ワイドタイプのもの。
+//
+// jQueryモジュール「swiper」を使用する。
+// モジュール内部の詳細要素の命名は、プラグインの仕様に基づきカスタマイズ可能。
+// → `js/module/main_visual_carousel.js`
+//
+// 構造
+// --------------------------------------------------
+// * .main_visual_carousel_wide　…　モジュール名
+// 	* .swiper-container　…　プラグイン規定のコンテナ
+// 		* .swiper-wrapper　…　プラグイン規定のコンテンツ包括要素
+// 			* .swiper-slide　…　プラグイン規定のスライドコンテンツ
+// 	* .controller　…　コントロール包括用（※独自追加　）
+// 		* .pagination-wide　…　ページネーション（※設定jsファイルにより命名変更）
+// 		* .prev-wide　…　前へのリンク（※設定jsファイルにより命名変更）
+// 		* .next-wide　…　次へのリンク（※設定jsファイルにより命名変更）
+//
+// 注意事項
+// --------------------------------------------------
+// ページ内に複数設置する場合には、ページネーションと、次へ、前へ　のボタンの命名を変える必要がある。
+// これらは、jsの設定ファイルで命名変更可能。
+//
+
+
+
+// Roots
+.main_visual_carousel_wide {
+	background-color: #998E7D;
+	padding: 40px 0;
+	text-align: center;
+	min-height: 300px; //初期表示のチラつきを抑える（適宜変更）
+}
+
+// Structure
+.main_visual_carousel_wide--header {}
+.main_visual_carousel_wide--body {}
+.main_visual_carousel_wide--footer {}
+
+
+// 【包括】
+// ==================================================
+//
+.main_visual_carousel_wide {
+
+	// コンテナ（規定の命名）
+	// --------------------------------------------------
+	.swiper-container {
+
+		// スライドエリア（規定の命名）
+		// 画像など、スライドのメインコンテンツ領域
+		.swiper-wrapper {
+
+			// スライドコンテンツ（規定の命名／コンテンツ毎に付与）
+			.swiper-slide {
+				max-width: 960px; // この幅で左右の見切れを制御可能
+				height: auto;
+				a {
+					display: block;
+				}
+			}
+		}
+
+		// ページネーション(※設定ファイルにより変更可)
+		// ※ブレットは、プラグインによりHTML出力される
+		.pagination-wide {
+			margin-top: 20px;
+			// ブレット（規定の命名）
+			.swiper-pagination-bullet {
+				width: 16px;
+				height: 16px;
+				margin: 0 5px;
+				border: 1px solid #fff;
+				background-color: #aaa;
+				opacity: 1;
+				// アクティブ時（規定の命名）
+				&.swiper-pagination-bullet-active {
+					background-color: #555;
+					border: 1px solid #ccc;
+					opacity: 1;
+				}
+			}
+		}
+
+		// スクロールバー（規定の命名）
+		.swiper-scrollbar {
+		}
+	}
+
+	// コントロールエリア(※独自追加)
+	// --------------------------------------------------
+	.controller {
+		position: relative;
+
+		//　前へのボタン、次へのボタン共通スタイル
+		.prev-wide,
+		.next-wide {
+			position: absolute;
+			cursor: pointer;
+			bottom: 0px;
+			z-index: 2;
+		}
+
+		//　前へのボタン(※設定ファイルにより変更可)
+		.prev-wide {
+			left: 0;
+			// pcモニタでのボタン表示
+			/*.icon*/.is-pc {
+			}
+			// モバイルでのボタン表示
+			/*.icon*/.is-mb {
+				display: none;
+			}
+		}
+
+		//　次へのボタン(※設定ファイルにより変更可)
+		.next-wide {
+			right: 0;
+			// pcモニタでのボタン表示
+			/*.icon*/.is-pc {
+			}
+			// モバイルでのボタン表示
+			/*.icon*/.is-mb {
+				display: none;
+			}
+		}
+
+
+	}
+
+}
+

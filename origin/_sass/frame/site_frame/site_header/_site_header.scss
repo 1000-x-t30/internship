@@ -1,0 +1,72 @@
+// サイトヘッダー領域
+// ======================================================================
+// サイト内で共通して表示するヘッダー。
+// 内部が複雑であったり、構造化が必要な場合は、状況に応じて`Object`にある素材を使う
+//
+
+// Roots
+.site_header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	height: $site_header_height;
+	background-color: #f1f1f1;
+}
+
+// Structure
+// --------------------------------------------------
+// 構造体が必要な場合は利用する
+
+// Divider（ラッパー）
+.site_header--outer {}
+.site_header--inner {}
+
+// Layout（ラッパー）
+.l-site_header--outer {}
+.l-site_header--inner {}
+
+// Layout（上・中・下）
+.l-site_header--top {}
+.l-site_header--middle {}
+.l-site_header--bottom {}
+
+
+
+// 【命名所属化】
+// ==================================================
+//
+
+.site_header--branding {}
+
+.site_header--logo {}
+
+.site_header--site_name {}
+
+
+// 【包括】
+// ==================================================
+//
+
+.site_header {
+	.branding {
+
+	}
+	.logo {
+
+	}
+	.site_name {
+
+	}
+	.description {
+
+	}
+}
+
+
+
+// Rootsへのマルチクラス付与（語句追加複製／状態変化）
+// --------------------------------------------------
+
+

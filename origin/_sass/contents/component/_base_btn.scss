@@ -1,0 +1,56 @@
+.base_btn--outer
+{
+	position: fixed;
+	padding-top: 34px; //navBtnと同じ
+	padding-right: 5%;
+	padding-left: 5%;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1920px;
+	z-index: 101;
+}
+
+.base_btn
+{
+	position: relative;
+	margin-left: auto;
+	width: 39px;
+	height: 39px;
+	cursor: pointer;
+
+	&::before,
+	&::after
+	{
+		content: '';
+		position: absolute;
+		left: 5px;
+		background-color: #000; //
+		width: 29px;
+		height: 2px;
+		transform-origin: 50% 50%;
+		transition-property: top transform;
+		transition-duration: .3s;
+	}
+	&::before
+	{
+		top: 14px;
+	}
+	&::after
+	{
+		top: 23px;
+	}
+
+	&.is-active
+	{
+		&::before
+		{
+			top: 50%;
+			transform: rotateZ(45deg);
+		}
+		&::after
+		{
+			top: 50%;
+			transform: rotateZ(-45deg);
+		}
+	}
+}

@@ -1,0 +1,116 @@
+// フォーム部品用 説明などの添付用テキスト
+// ==========================================================================
+// データ入力エリアにて、フォームと組み合わせて使う小タイトルなどのテキスト
+//
+
+// Roots
+.form_text {
+}
+
+// 【別名複製】 単独利用
+// ==========================================================
+// ※シングルクラス用途のもので、数が増える場合は別途ファイル化する
+
+
+// 小見出し、ジョイントなど
+// --------------------------------------------------
+//
+
+// ### 初期設定
+.form_text-ttl,
+.form_text-txt {
+	display: inline-block;
+	line-height: 1.4;
+	padding: 10px 0;
+	margin: 4px;
+}
+
+// ### 入力フォーム部品付近の小見出し
+
+.form_text-ttl {}
+
+// ブロック化
+.form_text-ttl-block {
+	display: block;
+	padding: 10px 0 0 0;
+	margin: 4px;
+}
+
+// ### 何らかのテキストが必要になった場合に使用
+.form_text-txt {
+}
+
+// ### 中間テキストなど（ハイフンなどで繋ぐ場合）
+.form_text-joint {
+}
+
+
+
+
+// 説明やエラーなどのテキスト系
+// --------------------------------------------------
+//
+
+// ### インライン表示のもの
+
+//初期設定
+.form_text-example ,
+.form_text-description ,
+.form_text-error {
+	display: inline-block;
+	padding: 10px 0;
+	margin: 4px;
+	line-height: 1.6;
+
+	small {
+		font-size: 86%;
+	}
+}
+// 入力例のテキスト
+.form_text-example {
+	color: #777;
+}
+// 入力説明のテキスト
+.form_text-description {
+	color: #333;
+}
+// エラー表示のテキスト
+.form_text-error {
+	color: #e80e0e;
+}
+
+
+// ### 一行表示のもの
+
+//初期設定
+.form_text-example-block ,
+.form_text-description-block ,
+.form_text-error-block {
+	display: block;
+	padding: 10px 0;
+	margin: 4px;
+	line-height: 1.6;
+
+	small {
+		font-size: 86%;
+	}
+}
+
+// 入力例のテキスト
+.form_text-example-block {
+	color: #777;
+}
+// 入力説明のテキスト
+.form_text-description-block {
+	color: #333;
+}
+// エラー表示のテキスト
+.form_text-error-block {
+	color: #e80e0e;
+	background-color: #f7eaea;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 6px;
+}
+
+

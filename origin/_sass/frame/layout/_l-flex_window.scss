@@ -1,0 +1,47 @@
+.l-flex_window
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #E8E8E8;
+	z-index: 100;
+
+	display: none;
+	overflow: hidden;
+	opacity: 0;
+	transition-property: overflow opacity;
+	transition-timing-function: ease-out;
+	transition-duration: .1s;
+
+	&.is-active
+	{
+		// display: block;
+		overflow: visible;
+		opacity: 1;
+	}
+}
+
+.l-flex_window--inner
+{
+	margin: 0 auto;
+	max-width: 1920px;
+	height: 100%;
+	display: flex;
+}
+
+.l-flex_window--right
+{
+	padding: 10px;
+	width: 50%;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+.l-flex_window--left
+{
+	padding: 10px;
+	width: 50%;
+	height: 100%;
+}

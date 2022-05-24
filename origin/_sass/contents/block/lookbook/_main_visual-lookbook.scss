@@ -1,0 +1,286 @@
+
+// first view look book ----------------------------------------
+
+.first_view-lookbook
+{
+	background-image: url(/_asset/images/lookbook/first_view.png);
+
+
+	.circle_btn3
+	{
+		right: 0;
+		bottom: 0;
+		transform: translate(20%, 50%);
+	}
+	.inline
+	{
+		top: 0;
+	}
+	.sub_description
+	{
+		top: 50%;
+		right: 0;
+		padding-bottom: 3em;
+		transform: translate(50%, -50%);
+
+		&::after
+		{
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background-image: url(/_asset/images/global/parts/down_white_arrow.svg);
+			background-position: left top;
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 60px;
+		}
+	}
+}
+
+
+// perfect look look book ----------------------------------------
+
+.perfect_look-lookbook--header
+{
+	padding-top: 80px;
+	padding-bottom: 80px;
+	text-align: center;
+
+	.title
+	{
+		font-size: 2.8rem;
+		padding-bottom: 15px;
+
+		+ p
+		{
+			font-size: 1.8rem;
+			padding-bottom: 15px;
+			opacity: .3;
+		}
+	}
+}
+
+.perfect_look-lookbook--main
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-bottom: 200px;
+
+	@media screen and (max-width: 768px) {
+		display: block;
+		padding-bottom: 100px;
+
+		> p
+		{
+			padding-bottom: 60px;
+		}
+	}
+
+	> p
+	{
+		flex-basis: 48%;
+	}
+}
+
+
+// what else look book ----------------------------------------
+
+.what_else-lookbook--header
+{
+	text-align: center;
+	padding-bottom: 75px;
+
+	h2 {
+		font-weight: 700;
+	}
+}
+
+.what_else-lookbook--main
+{
+	text-align: center;
+	padding-bottom: 60px;
+}
+
+
+// just enjoy look book ----------------------------------------
+
+.just_enjoy-lookbook--header
+{
+	h2 {
+		text-align: center;
+		font-weight: 700;
+	}
+}
+
+.just_enjoy-lookbook--main
+{
+	position: relative;
+	margin-bottom: 300px;
+
+	@media screen and (max-width: 480px) {
+		margin-bottom: 100px;
+	}
+
+	.content
+	{
+		position: relative;
+		pointer-events: none;
+
+		&::after
+		{
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: #FF5D00;
+			width: 3px;
+			height: 80%;
+			transform-origin: right;
+			transform: rotateZ(30deg);
+			z-index: 6;
+			transform-origin: transform top right height;
+			transition-duration: .3s;
+
+			@media screen and (max-width: 1366px) {
+				top: 60%;
+				right: 10%;
+				height: 50%;
+				transform: rotateZ(210deg);
+			}
+		}
+	}
+
+	.just_enjoy-lookbook--main-images
+	{
+
+		@media screen and (max-width: 1366px) {
+			height: 800px;
+			position: relative;
+		}
+
+		> p
+		{
+			position: absolute;
+			transition-property: top right bottom left;
+			transition-duration: 1s;
+
+			&:nth-of-type(1)
+			{
+				top: 20%;
+				right: 15%;
+				z-index: 4;
+			}
+			&:nth-of-type(2)
+			{
+				top: 110%;
+				right: 10%;
+				z-index: 3;
+			}
+			&:nth-of-type(3)
+			{
+				top: 105%;
+				right: auto;
+				left: 10%;
+				z-index: 2;
+			}
+			&:nth-of-type(4)
+			{
+				top: 95%;
+				right: 5%;
+				z-index: 1;
+			}
+
+			@media screen and (max-width: 1366px) {
+				padding: 1px;
+				background-color: #fff;
+
+				&:nth-of-type(1)
+				{
+					top: 15%;
+					right: 50%;
+					filter: blur(1px);
+				}
+				&:nth-of-type(2)
+				{
+					top: 60%;
+					right: 15%;
+					filter: blur(1px);
+				}
+				&:nth-of-type(3)
+				{
+					top: 5%;
+					left: auto;
+					right: 0%;
+					filter: blur(2px);
+				}
+				&:nth-of-type(4)
+				{
+					top: 40%;
+					right: 5%;
+					z-index: 5;
+				}
+
+			}
+		}
+	}
+}
+
+
+
+// total wood look book ----------------------------------------
+
+.total_wood-lookbook--header
+{
+	h2 {
+		text-align: center;
+		font-weight: 700;
+	}
+}
+
+.total_wood-lookbook--main
+{
+
+	.visual_items
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #E8E8E8;
+		padding-top: 80px;
+		padding-bottom: 40px;
+
+		@media screen and (max-width: 530px) {
+			display: block;
+
+			> p
+			{
+				padding-bottom: 60px;
+			}
+		}
+
+		> *
+		{
+			flex-basis: 48%;
+		}
+	}
+
+	.visual_items-slide
+	{
+		padding-right: 10%;
+		padding-left: 10%;
+
+		.visual_items-images
+		{
+			padding-bottom: 80px;
+		}
+
+		.visual_items-controller
+		{
+			text-align: center;
+		}
+	}
+}

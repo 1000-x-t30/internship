@@ -1,0 +1,1 @@
+npm install -g browser-sync@2.26.3&npm install -g gulp-cli@2.1.0&npm install -g webpack@4.30.0&npm install -g webpack-cli@3.2.3&npm install -g webpack-stream@5.2.1

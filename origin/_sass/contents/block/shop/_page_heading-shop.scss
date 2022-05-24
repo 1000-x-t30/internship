@@ -1,0 +1,29 @@
+// ページの表題
+// ==========================================================================
+// ページそのものの最も大きい見出し。
+// `h1`を内包するようなもの
+
+
+// collections-shop, choise-shopは'main_visual'で管理
+//
+.collections-shop
+.choise-shop,
+.vintage-shop,
+.hey-shop
+{
+	width: 100%;
+}
+
+.vintage-shop--inner,
+.hey-shop--inner
+{
+	margin: 0 auto;
+	max-width: 1920px;
+}
+
+.vintage-shop--inner,
+.hey-shop--inner
+{
+	padding-right: 5%;
+	padding-left: 5%;
+}

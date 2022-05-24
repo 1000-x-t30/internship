@@ -1,0 +1,79 @@
+// フォームの`label`をラップする要素に付与
+// ==========================================================================
+//
+// `label`タグは大きく二つの用途に分かれる。
+// 1. 一行テキスト入力に対応する見出しとして
+// 2. ラジオやチェックボックスとテキストをラップする要素として
+//
+// 前者の場合、`span`が適切な場合はそのようにする。
+//
+
+// Roots
+.form_label {
+}
+
+
+
+// 【別名複製】 単独利用
+// ==================================================
+// ※シングルクラス用途のもので、数が増える場合は別途ファイル化する
+
+// 初期設定
+.form_label-title ,
+.form_label-wrap ,
+.form_label-wrap-block ,
+.form_label-wrap-line {
+	line-height: 1.6;
+	padding: 10px 0;
+	margin: 4px;
+}
+
+
+// 1. 入力項目の表題
+// --------------------------------------------------
+// 入力項目の題名 `span`もしくは、テキスト入力系の時は`label`に付与
+//
+
+.form_label-title {
+	display: inline-block;
+}
+
+
+// 2. ラジオorチェック＋テキストをラップする`label`に付与
+// --------------------------------------------------
+
+// インライン
+.form_label-wrap {
+	display: inline-block;
+}
+
+// ライン（文字の終点までがマウスのヒットエリア）
+.form_label-wrap-line {
+	display: block;
+	float: left;
+	clear: left;
+	margin-right: 1em;
+}
+
+// 行（端までがマウスのヒットエリア）
+.form_label-wrap-block {
+	display: block;
+	margin-right: 1em;
+	padding-left: 0.6em;
+	padding-right: 0.6em;
+	background-color:#f3f3f3;
+	border-radius: 6px;
+
+	&:hover {
+		background-color:#ededed;
+	}
+
+	&:active {
+	}
+
+	+ .form_label-wrap-block {
+		margin-top: 10px;
+	}
+}
+
+

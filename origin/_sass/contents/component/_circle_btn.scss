@@ -1,0 +1,169 @@
+// -- circle1 ---------------------------------------------------------
+
+.circle_btn1
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: transparent;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgba(255,255,255,0.4);
+	border-radius: 50%;
+	width: 416px;
+	height: 416px;
+	line-height: 1.1em;
+	z-index: 1;
+	cursor: pointer;
+
+	transition-property: background-color;
+	transition-duration: .3s;
+
+	&:hover
+	{
+		background-color: rgba(255,255,255,0.4);
+	}
+
+	&::after
+	{
+		content: '';
+		position: absolute;
+		top: -10%;
+		right: 20%;
+		background-color: #FF5D00;
+		width: 3px;
+		height: 150%;
+		transform: rotateZ(30deg);
+		z-index: 2;
+	}
+
+	span
+	{
+		position: relative;
+		display: inline-block;
+		color: #fff;
+		font-size: 1.8rem;
+		letter-spacing: .5rem;
+		vertical-align: middle;
+
+		&::before
+		{
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 100%;
+			background-image: url(/_asset/images/global/parts/play.svg); //
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+			width: 12px;
+			height: 15px;
+			transform: translateY(-50%);
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		width: 350px;
+		height: 350px;
+	}
+	@media screen and (max-width: 480px) {
+		width: 230px;
+		height: 230px;
+	}
+}
+
+
+// -- circle2 ---------------------------------------------------------
+
+.circle_btn2
+{
+	position: relative;
+	background-color: transparent;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FA6A18;
+	border-radius: 50%;
+	width: 416px;
+	height: 416px;
+	line-height: 1.1em;
+	z-index: 1;
+
+	span
+	{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: inline-block;
+		color: #FA6A18;
+		font-size: 1.8rem;
+		line-height: 2em;
+		letter-spacing: .5em;
+		padding-top: 1em;
+		text-align: left;
+		vertical-align: middle;
+		transform: translateY(-50%);
+
+		&::before
+		{
+			content: '';
+			position: absolute;
+			bottom: 100%;
+			left: 0;
+			background-image: url(/_asset/images/global/parts/play_video.svg); //
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+			width: 23px;
+			height: 14px;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		width: 300px;
+		height: 300px;
+	}
+}
+
+
+// -- circle3 ---------------------------------------------------------
+
+.circle_btn3
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgba(255,255,255, .4);
+	border-radius: 50%;
+	width: 416px;
+	height: 416px;
+
+	> p
+	{
+		position: relative;
+		font-size: 1.1rem;
+		padding-bottom: 100px;
+
+		&::after
+		{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			content: '';
+			background-image: url(/_asset/images/global/parts/next_arrow.svg);
+			background-size: contain;
+			background-position: left bottom;
+			background-repeat: no-repeat;
+			width: 50%;
+			height: 100%;
+			// z-index: 2;
+
+			@media screen and (max-width: 480px) {
+				background-size: 30%;
+			}
+		}
+	}
+}

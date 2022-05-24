@@ -1,0 +1,62 @@
+.collections_description
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 50%;
+	text-align: center;
+}
+
+.collections_description--header
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	// padding-top: 80px;
+	// padding-bottom: 80px;
+	padding-top: 15%;
+	padding-bottom: 15%;
+
+	.title
+	{
+		text-align: center;
+	}
+}
+
+.collections_description--main
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 60%;
+
+	.title
+	{
+		font-size: 2.8rem;
+		padding-bottom: 15px;
+
+		+ p
+		{
+			font-size: 1.8rem;
+			padding-bottom: 15px;
+			opacity: .3;
+		}
+	}
+
+	p:last-of-type
+	{
+		padding-bottom: 65px;
+		order: -1;
+		object-fit: cover;
+	}
+}
+
+.collections_description--footer
+{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	// flex-grow: 1;
+}

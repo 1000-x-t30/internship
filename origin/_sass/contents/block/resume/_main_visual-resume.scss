@@ -1,0 +1,314 @@
+
+// first_view-home roots --------------------
+
+.first_view-resume
+{
+	background-image: url(/_asset/images/resume/first_view.png);
+
+	.circle_btn3
+	{
+		top: 50%;
+		right: 0;
+	}
+
+	.sub_description
+	{
+		top: -10%;
+		right: 0;
+		transform: translateX(50%);
+
+		@media screen and (max-width: 1560px) {
+			display: none;
+		}
+	}
+}
+
+
+// all_about-resume roots --------------------
+
+.all_about-resume--header
+{
+	h2
+	{
+		text-align: center;
+	}
+}
+
+.all_about-resume--main
+{
+	padding-bottom: 190px;
+
+	.description:last-of-type
+	{
+		font-weight: 600;
+		padding-top: 10px;
+	}
+
+	.color-underline
+	{
+		position: relative;
+		display: inline-block;
+    color: #fa6a18;
+    font-size: 1.4rem;
+    line-height: 4rem;
+    letter-spacing: 2em;
+    padding-top: 40px;
+    padding-bottom: 60px;
+		margin-bottom: 160px;
+    white-space: nowrap;
+    vertical-align: middle;
+
+		&::before
+		{
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			width: 2px;
+			height: 60px;
+			transform: translateX(-50%);
+			background-color: #FA6A18;
+			margin-left: 0;
+		}
+		&::after
+		{
+			content: '';
+			margin-left: -2em;
+		}
+	}
+}
+
+
+// experience-resume roots --------------------
+
+.experience-resume
+{
+	width: 100%;
+}
+
+.experience-resume--inner
+{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+}
+
+.experience-resume--header-inner,
+.experience-resume--main-inner
+{
+	margin: 0 auto;
+	max-width: 1920px;
+}
+
+.experience-resume--header
+{
+	position: relative;
+	padding-top: 15%;
+	padding-bottom: 15%;
+	z-index: 50;
+
+	.title
+	{
+		font-size: 5rem;
+		font-weight: 600;
+		overflow-wrap: break-word;
+		white-space: normal;
+	}
+
+}
+
+.experience-resume--main
+{
+	padding-bottom: 270px;
+
+	section
+	{
+		position: relative;
+		padding-bottom: 10%;
+		z-index: 50;
+	}
+
+	h3
+	{
+		font-size: 4rem;
+		padding-bottom: 40px;
+	}
+
+	.experience-resume--main-iamges
+	{
+
+		p
+		{
+			position: absolute;
+
+			@media screen and (max-width: 768px) {
+				position: static;
+				flex-basis: 50%;
+				width: 50%;
+				min-width: 50%;
+				padding: 10px;
+
+				animation-name: auto-scrollY;
+				animation-duration: 10s;
+				animation-fill-mode: forwards;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+
+
+				@keyframes auto-scrollY {
+					from
+					{
+						transform: translateX(0);
+					}
+					to
+					{
+						transform: translateX(-300%);
+					}
+				}
+
+				img
+				{
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					object-position: center;
+				}
+			}
+
+			&:nth-of-type(1)
+			{
+				top: 85%;
+				right: 10%;
+				z-index: 7;
+			}
+			&:nth-of-type(2)
+			{
+				top: 28%;
+				right: 5%;
+				z-index: 6;
+			}
+			&:nth-of-type(3)
+			{
+				top: 15%;
+				left: 5%;
+				z-index: 5;
+			}
+			&:nth-of-type(4)
+			{
+				top: -5%;
+				left: 10%;
+				z-index: 4;
+			}
+			&:nth-of-type(5)
+			{
+				top: 15%;
+				right: 0;
+				z-index: 3;
+			}
+			&:nth-of-type(6)
+			{
+				top: -5%;
+				right: 10%;
+				z-index: 2;
+			}
+			&:nth-of-type(7)
+			{
+				top: 70%;
+				left: 8%;
+				z-index: 1;
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			display: flex;
+			flex-wrap: nowrap;
+			overflow-x: hidden;
+		}
+	}
+}
+
+
+// social_networks-resume roots --------------------
+
+.social_networks-resume
+{
+	background-color: #E8E8E8;
+}
+
+.social_networks-resume--main
+{
+	margin: 0 auto;
+	max-width: 895px;
+	transform: translateY(-10%);
+
+	.social_networks_visual
+	{
+		padding-bottom: 15px;
+	}
+
+	.social_networks_following--header
+	{
+		padding-top: 15px;
+		padding-bottom: 15px;
+		border-bottom: 2px solid #000;
+	}
+
+	section
+	{
+		border-top: 2px solid #000;
+		border-bottom: 2px solid #000;
+
+		@media screen and (max-width: 768px) {
+			.arrow_next
+			{
+				display: none;
+			}
+		}
+	}
+
+	.content:not(:last-of-type)
+	{
+		margin-bottom: 210px;
+	}
+}
+
+.social_networks-resume--footer
+{
+	padding-right: 5%;
+	padding-bottom: 10%;
+	padding-left: 5%;
+	margin: 0 auto;
+	max-width: 710px;
+
+	> p
+	{
+		border-bottom: 2px solid #FA6A18;
+		margin-bottom: 30px;
+
+		span
+		{
+			display: block;
+			font-size: 4.3rem;
+			line-height: 1.5em;
+			text-align: center;
+		}
+	}
+
+	.arrow_next
+	{
+		margin: 0 auto;
+		> span
+		{
+			background-color: #FA6A18;
+
+			&::before,
+			&::after
+			{
+				background-color: #FA6A18;
+			}
+		}
+	}
+}

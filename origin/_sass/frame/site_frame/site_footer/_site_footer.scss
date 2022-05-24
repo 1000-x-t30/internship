@@ -1,0 +1,101 @@
+/*
+[frame] footer
+================================================================================
+*/
+//
+// サイトフッター領域
+// ======================================================================
+// サイト内で共通して表示するフッター。
+// 内部が複雑であったり、構造化が必要な場合は、状況に応じて`Object`にある素材を使う
+//
+
+// Roots
+.site_footer {
+	position: relative;
+	background-color: #F2F2F2;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 10px;
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b5ecff+-1,49bee7+100 */
+		background: #b5ecff; /* Old browsers */
+		background: -moz-linear-gradient(left,  #b5ecff -1%, #49bee7 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  #b5ecff -1%,#49bee7 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  #b5ecff -1%,#49bee7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5ecff', endColorstr='#49bee7',GradientType=1 ); /* IE6-9 */
+	}
+}
+
+// Structure
+// --------------------------------------------------
+// 構造体が必要な場合は利用する
+
+// Divider（ラッパー）
+.site_footer--outer {}
+.site_footer--innner {}
+
+// Layout（ラッパー）
+.l-site_footer--outer {}
+.l-site_footer--innner {}
+
+// Layout（上・中・下）
+.l-site_footer--top {}
+.l-site_footer--middle {
+	padding: 70px 0;
+}
+.l-site_footer--bottom {}
+
+
+
+// 【命名所属化】
+// ==================================================
+//
+
+.site_footer--branding {}
+
+.site_footer--logo {}
+
+.site_footer--site_name {}
+
+.site_footer--copyright {}
+
+.site_footer--sitemap {}
+
+
+
+// 【包括】
+// ==================================================
+//
+
+.site_footer {
+	.l-container {
+		display: flex;
+		justify-content: space-between;
+		flex: 1;
+
+		@media (max-width: 800px) {
+			display: block;
+			margin: 0;
+		}
+	}
+	.l-pane-1 {
+		width: auto;
+	}
+	.l-pane-2 {
+		width: 480px;
+	}
+}
+
+
+
+
+// Rootsへのマルチクラス付与（語句追加複製／状態変化）
+// --------------------------------------------------
+
+
+

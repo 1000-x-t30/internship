@@ -1,0 +1,17 @@
+.side_description
+{
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	font-size: 2.6rem;
+	font-weight: 400;
+	text-align: center;
+	width: 255px;
+	transform-origin: left;
+	transform: translateY(-50%) rotateZ(270deg);
+
+	@media screen and (max-width: 768px) {
+		font-size: 1.4rem;
+		width: 100%;
+	}
+}

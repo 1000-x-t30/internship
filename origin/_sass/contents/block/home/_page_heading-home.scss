@@ -1,0 +1,49 @@
+// ページの表題
+// ==========================================================================
+// ページそのものの最も大きい見出し。
+// `h1`を内包するようなもの
+//
+
+/* article Emet
+	article.>div.--inner>div.--header+div.--main+div.--foote
+*/
+
+//first_view-home, services-homeは '_main_visual-home.scss' で管理
+.meet_me-home,
+.my_products-home,
+.clothing-home,
+.hey-home
+{
+	width: 100%;
+}
+
+.meet_me-home--inner,
+.my_products-home--inner,
+.clothing-home--inner,
+.hey-home--inner
+{
+	margin: 0 auto;
+	padding: 65px 5%;
+	max-width: 1920px;
+}
+
+.home--wrapper
+{
+	h2
+	{
+		font-size: 1.4rem;
+		padding-top: 100px;
+		padding-bottom: 90px;
+	}
+
+	li
+	{
+		list-style: none;
+	}
+
+	a
+	{
+		display: inline-block;
+		padding: 5px;
+	}
+}
